@@ -15,6 +15,7 @@ se garantiza que sólo exista una única instancia de la clase en todo momento.
 
 import sqlite3
 
+
 class DatabaseConnection:
     __instance = None
 
@@ -36,19 +37,18 @@ class DatabaseConnection:
             print("Already connected to the database")
         return self.cursor
 
+
 # Usage
 conn = DatabaseConnection()
 cursor = conn.connect("database.db")
-print(cursor) # <sqlite3.Cursor object at 0x...>
+print(cursor)  # <sqlite3.Cursor object at 0x...>
 
 conn2 = DatabaseConnection()
 cursor2 = conn2.connect("database.db")
-print(cursor2) # Already connected to the database
-               # <sqlite3.Cursor object at 0x...>
-
-
-
+print(cursor2)  # Already connected to the database
+# <sqlite3.Cursor object at 0x...>
 """ Mediante uso de un decorador, para que sea más 'pythonico'"""
+
 
 def singleton(cls):
     instances = {}
@@ -60,8 +60,10 @@ def singleton(cls):
 
     return get_instance
 
+
 @singleton
 class DatabaseConnection:
+
     def __init__(self):
         self.connection = None
         self.cursor = None
@@ -75,12 +77,13 @@ class DatabaseConnection:
             print("Already connected to the database")
         return self.cursor
 
+
 # Usage
 conn = DatabaseConnection()
 cursor = conn.connect("database.db")
-print(cursor) # <sqlite3.Cursor object at 0x...>
+print(cursor)  # <sqlite3.Cursor object at 0x...>
 
 conn2 = DatabaseConnection()
 cursor2 = conn2.connect("database.db")
-print(cursor2) # Already connected to the database
-               # <sqlite3.Cursor object at 0x...>
+print(cursor2)  # Already connected to the database
+# <sqlite3.Cursor object at 0x...>
