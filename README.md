@@ -54,7 +54,7 @@ superclase, pero delega algunos pasos específicos de ese algoritmo a las
 subclases. De esta manera, permite que las subclases redefinan ciertos pasos 
 del algoritmo sin cambiar su estructura general.
 
-# Componentes del Patrón:
+Componentes del Patrón:
 
 Clase Abstracta (Abstract Class): Esta es la clase base que define la estructura 
 del algoritmo en términos de métodos abstractos (métodos que se declaran pero 
