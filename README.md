@@ -47,6 +47,45 @@ Decorador: Esta es la clase abstracta que extiende la interfaz del componente y
 contiene una referencia a un componente concreto. Los decoradores agregan 
 funcionalidad adicional antes o después de delegar la llamada al componente concreto.
 
+## Método de Plantilla
+El patrón de diseño Método de Plantilla (Template Method) es un patrón de diseño 
+de comportamiento que define la estructura básica de un algoritmo en una 
+superclase, pero delega algunos pasos específicos de ese algoritmo a las 
+subclases. De esta manera, permite que las subclases redefinan ciertos pasos 
+del algoritmo sin cambiar su estructura general.
+
+# Componentes del Patrón:
+
+Clase Abstracta (Abstract Class): Esta es la clase base que define la estructura 
+del algoritmo en términos de métodos abstractos (métodos que se declaran pero 
+no se implementan en la clase base). Los métodos concretos en la clase 
+abstracta son los pasos del algoritmo que no deben cambiar.
+
+Método Plantilla (Template Method): Este es el método principal en la clase 
+abstracta que define la secuencia de llamadas a los métodos abstractos y 
+concretos que componen el algoritmo. Los pasos del algoritmo se definen en 
+este método y no deben modificarse en las subclases.
+
+Métodos Abstractos (Abstract Methods): Estos son los métodos declarados en la 
+clase abstracta que representan los pasos del algoritmo que deben implementarse 
+en las subclases.
+
+Métodos Concretos (Concrete Methods): Estos son los métodos en la clase 
+abstracta que proporcionan implementaciones predeterminadas para ciertos 
+pasos del algoritmo. Estos métodos son opcionales y pueden ser sobrescritos 
+por las subclases si es necesario.
+
+Ventajas del Patrón de Diseño del Método de Plantilla:
+
+Reutilización de Código: Permite la reutilización de la estructura de 
+algoritmos sin duplicación de código.
+
+Extensibilidad: Facilita la extensión de la funcionalidad del algoritmo 
+mediante la creación de nuevas subclases que redefinen pasos específicos.
+
+Mantenimiento: Cambiar o mejorar el algoritmo general es más fácil, ya que 
+los cambios se realizan en un solo lugar, en la clase base.
+
 ## Instrucciones de uso
 Para utilizar estos ejemplos, simplemente clone este repositorio y abra los 
 archivos individuales para ver cada ejemplo de patrón de diseño. Asegúrese de 
